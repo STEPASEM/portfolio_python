@@ -29,7 +29,7 @@ color_map = {
 class Strab():
     def __init__(self):
         self.straboscope_window = Tk()
-        self.straboscope_window.title("STRABOSCOPE_WINDOW")
+        self.straboscope_window.title("STRABOSCOPE")
         self.straboscope_window.geometry("450x450")
         self.straboscope_window.bind("<KeyPress>", self.bind_keys)
         self.start_stop = 1
