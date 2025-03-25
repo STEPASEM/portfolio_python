@@ -6,7 +6,7 @@ import v_dal_take_with_website
 telegram bot for getting information about the meaning of a word from Dahl's dictionary
 """
 
-TOKEN = ""
+TOKEN = "8187923844:AAFTTd3E8TaThPlKITmoBazNka0t9ediED0"
 bot = Bot(token=TOKEN, parse_mode='HTML')
 dp = Dispatcher(bot)
 

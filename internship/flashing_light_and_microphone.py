@@ -12,7 +12,6 @@ import pyaudio
 import numpy as np
 from scipy.fftpack import fft
 
-
 CHUNK = 1024  # Размер буфера для захвата звука
 RATE = 44100  # Частота дискретизации
 CHANNELS = 1  # Количество каналов (моно)
