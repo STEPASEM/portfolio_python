@@ -1,0 +1,14 @@
+ {% extends "base.html" %}
+
+ {% block content %}
+    <hr>
+    <h1>{{ title }}</h1>
+    {% for product in products %}
+        <p>{{ product }}</p>
+    {% if forloop.last %}
+    <hr>
+    {% endif %}
+    {% empty %}
+    Товаров пока не подвезли
+    {% endfor %}
+ {% endblock %}
