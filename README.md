@@ -23,7 +23,10 @@
 
 #### sprint_4
 * Основы Django
-
+    * acme_project - тренировочный вариант магазина по продаже мороженного
+    * anfisa1sprint - финальный вариант магазина по продаже мороженного 
+      
+        
         python manage.py startapp <name> -- создание приложения
         django-admin startproject <name> -- создание проекта
         python manage.py runserver -- запуск сервера
