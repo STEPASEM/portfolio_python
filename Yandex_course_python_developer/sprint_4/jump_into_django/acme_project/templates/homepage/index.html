@@ -1,13 +1,8 @@
- {% extends "base.html" %}
+{% extends "base.html" %}
 
- {% block content %}
-   <h1>{{ title }}</h1>
-    <p>Товар дня: {{ promo_product }}</p>
-    <a href="{% url 'catalog:product_list' %}">
-        Страница со списком товаров
-    </a>
-    <br>
-    <a href="{% url 'catalog:product_detail' 1 %}">
-        Страница c товаром номер 1
-    </a>
- {% endblock %}
+{% block title %}
+  Анфиса для друзей. Главная
+{% endblock %}
+{% block content %}
+  <h1 class="pb-2 mb-0">Главная страница</h1>
+{% endblock %}
