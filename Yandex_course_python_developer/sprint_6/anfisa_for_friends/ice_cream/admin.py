@@ -32,7 +32,7 @@ class IceCreamAdmin(admin.ModelAdmin):
     list_filter = ('is_published',)
     list_display_links = ('title',)
     #добавляем возможность выбора нескольких топпингов:
-    filter_horizontal = ('toppings',)
+    filter_horizontal = ('toppings', )
 
 #регистрируем её в админке:
 admin.site.register(Category, CategoryAdmin)
