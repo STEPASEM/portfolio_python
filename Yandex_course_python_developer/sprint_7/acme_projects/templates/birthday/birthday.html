@@ -3,25 +3,37 @@
 {% load django_bootstrap5 %}
 
 {% block content %}
-    <div class="card col-4">
-        <div class="card-header">
+    {% with data=form.instance %}
+        {% if '/edit/' in request.path %}
+          <h1>Редактировать запись {{ data.pk }}</h1>
+        {% else %}
+          <h1>Создать запись</h1>
+        {% endif %}
+        <div class="card col-4">
+          <div class="card-header">
             Калькулятор ожидания дня рождения
+          </div>
+          <div class="card-body">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                {% if '/edit/' in request.path %}
+                    {% bootstrap_button button_type="submit" name="action" value="save" content="Изменить" %}
+                    {% bootstrap_button button_type="submit" name="action" value="delete" content="Удалить" button_class="btn-danger" %}
+                {% else %}
+                    {% bootstrap_button button_type="submit" name="action" value="save" content="Отправить" %}
+                {% endif %}
+            </form>
+          </div>
         </div>
-        <div class="card-body">
-          <form>
-            {% bootstrap_form form %}
-            {% bootstrap_button button_type="submit" content="Отправить" %}
-          </form>
-        </div>
-    </div>
-    {% with data=request.GET %}
-        {% if form.is_valid %}
+        {% if form.is_valid or '/edit/' in request.path %}
+          ID записи в БД: {{ data.id }}
+          <hr>
           <h2>Привет, {{ data.first_name }} {{ data.last_name }}</h2>
           {% if birthday_countdown == 0 %}
-              <!-- ...выводим поздравление: -->
-              С днём рождения!
+            <p>С днём рождения!</p>
           {% else %}
-              Осталось дней до дня рождения: {{ birthday_countdown }}!
+            <p>Осталось дней до дня рождения: {{ birthday_countdown }}!</p>
           {% endif %}
         {% endif %}
     {% endwith %}

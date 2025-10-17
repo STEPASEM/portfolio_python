@@ -32,6 +32,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'acme_projects.urls'
 
+MEDIA_ROOT = BASE_DIR / 'media'
+
+MEDIA_URL = 'media/'
+
 TEMPLATES_DIR = BASE_DIR / 'templates'
 
 TEMPLATES = [
@@ -55,7 +59,7 @@ WSGI_APPLICATION = 'acme_projects.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.db',
     }
 }
 
