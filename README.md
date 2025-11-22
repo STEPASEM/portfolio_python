@@ -112,4 +112,22 @@
 * Декораторы
 
     
-    Познакомился с библиотеками: Pillow
+    Paginator
+    .has_next() — тип bool: есть ли страница со следующим номером;
+    .has_previous() — тип bool: есть ли страница с предыдущим номером;
+    .has_other_pages() — тип bool: есть ли другие страницы, кроме полученной;
+    .next_page_number() — тип int: каков номер следующей страницы;
+    .previous_page_number() — тип int: каков номер предыдущей страницы;
+
+ТАБЛИЦА СО СТРАНИЦАМИ ДЛЯ АВТОРИЗАЦИЕЙ ПОЛЬЗОВАТЕЛЕЙ
+
+| Назначение | URL | CBV | HTML-шаблон |
+|---|---|---|---|
+| Авторизация | Login/ | LoginView | login.html |
+| Выход из аккаунта | Logout/ | LogoutView | logged_out.html |
+| Смена пароля: форма «Придумайте новый пароль» | password_change/ | PasswordChangeView | password_change_form.html |
+| Смена пароля: страница с уведомлением «Пароль успешно изменён» | password_change/done/ | PasswordChangeDoneView | password_change_done.html |
+| Восстановление пароля: форма «Укажите свой email» | password_reset/ | PasswordResetView | password_reset_form.html |
+| Восстановление пароля: страница с уведомлением об «Вам на email отправлена ссылка для восстановления пароля» | password_reset/done/ | PasswordResetDoneView | password_reset_done.html |
+| Восстановление пароля: страница с формой «Придумайте новый пароль»; открывается по ссылке из письма | reset/<uidb64>/<token>/ | PasswordResetConfirmView | password_reset_confirm.html |
+| Восстановление пароля: страница с уведомлением «Пароль успешно изменён» | reset/done/ | PasswordResetCompleteView | password_reset_complete.html |
