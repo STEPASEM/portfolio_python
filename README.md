@@ -131,3 +131,7 @@
 | Восстановление пароля: страница с уведомлением об «Вам на email отправлена ссылка для восстановления пароля» | password_reset/done/ | PasswordResetDoneView | password_reset_done.html |
 | Восстановление пароля: страница с формой «Придумайте новый пароль»; открывается по ссылке из письма | reset/<uidb64>/<token>/ | PasswordResetConfirmView | password_reset_confirm.html |
 | Восстановление пароля: страница с уведомлением «Пароль успешно изменён» | reset/done/ | PasswordResetCompleteView | password_reset_complete.html |
+
+### sprint_8
+* Unittest
+* Pytest
