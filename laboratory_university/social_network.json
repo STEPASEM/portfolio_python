@@ -1,0 +1,75 @@
+{
+  "users": {
+    "7bb74d03-ec99-4ec4-a014-005b779af589": {
+      "user_id": "7bb74d03-ec99-4ec4-a014-005b779af589",
+      "username": "ivan_petrov",
+      "email": "ivan@example.com",
+      "first_name": "Иван",
+      "last_name": "Петров",
+      "registration_date": "2025-11-12T21:16:50.059931",
+      "friends": [
+        "3659d557-3dbf-4367-ab53-b6f84a702e7d",
+        "7d57fde8-2970-40ca-9e92-26c5c514ea95"
+      ],
+      "posts": [
+        "0061e00b-b2ba-4b28-ab11-162974ede106"
+      ]
+    },
+    "3659d557-3dbf-4367-ab53-b6f84a702e7d": {
+      "user_id": "3659d557-3dbf-4367-ab53-b6f84a702e7d",
+      "username": "maria_ivanova",
+      "email": "maria@example.com",
+      "first_name": "Мария",
+      "last_name": "Иванова",
+      "registration_date": "2025-11-12T21:16:50.059948",
+      "friends": [
+        "7bb74d03-ec99-4ec4-a014-005b779af589"
+      ],
+      "posts": [
+        "28626c25-7bab-447c-b9e4-001198905545"
+      ]
+    },
+    "7d57fde8-2970-40ca-9e92-26c5c514ea95": {
+      "user_id": "7d57fde8-2970-40ca-9e92-26c5c514ea95",
+      "username": "alex_smirnov",
+      "email": "alex@example.com",
+      "first_name": "Алексей",
+      "last_name": "Смирнов",
+      "registration_date": "2025-11-12T21:16:50.059956",
+      "friends": [
+        "7bb74d03-ec99-4ec4-a014-005b779af589"
+      ],
+      "posts": []
+    }
+  },
+  "posts": {
+    "0061e00b-b2ba-4b28-ab11-162974ede106": {
+      "post_id": "0061e00b-b2ba-4b28-ab11-162974ede106",
+      "author_id": "7bb74d03-ec99-4ec4-a014-005b779af589",
+      "content": "Мой первый пост в социальной сети!",
+      "post_type": "text",
+      "created_at": "2025-11-12T21:16:50.060029",
+      "likes": [
+        "3659d557-3dbf-4367-ab53-b6f84a702e7d",
+        "7d57fde8-2970-40ca-9e92-26c5c514ea95"
+      ],
+      "comments": [
+        {
+          "comment_id": "cdedd6ee-0226-4ee6-8a2c-79ce38088e9d",
+          "author_id": "3659d557-3dbf-4367-ab53-b6f84a702e7d",
+          "content": "Отличный пост, Иван!",
+          "created_at": "2025-11-12T21:16:50.060086"
+        }
+      ]
+    },
+    "28626c25-7bab-447c-b9e4-001198905545": {
+      "post_id": "28626c25-7bab-447c-b9e4-001198905545",
+      "author_id": "3659d557-3dbf-4367-ab53-b6f84a702e7d",
+      "content": "Прекрасный день для прогулки в парке 🌳",
+      "post_type": "text",
+      "created_at": "2025-11-12T21:16:50.060040",
+      "likes": [],
+      "comments": []
+    }
+  }
+}
